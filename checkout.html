@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="sh_build.js" async></script>
 	<title>Navigation Bar</title>
 	<style type="">
+        
 		*{
 			text-decoration: none;
 		}
@@ -128,6 +130,148 @@
    <section id="Shoelogo">
       <h2><img src="sh_shoelogo.png" class="img-thumbnail" alt="Cinque Terre" width="600px" height="30px"></h2>
       <div id="shoelogo">
+
+
+        <section id="orderSection">
+            <form id="cart" name="cart" action="co_credit.html" method="get">
+              <table id="cartTable">
+                <caption>
+                  Shopping Cart
+                </caption>
+                <tr>
+                  <td>
+                    <label>LOW TOP RUNNERS ($110)</label>
+                    <input
+                      type="hidden"
+                      name="modelCost"
+                      id="modelCost"
+                      value="110"
+                    />
+                    <input
+                      type="hidden"
+                      id="modelName"
+                      name="modelName"
+                      value="ECC115 Pump Espresso Machine ($249.95)"
+                    />
+                  </td>
+                  <td class="rightA">
+                    <label for="modelQty">Shoe Size</label>
+                    <select name="modelQty" id="modelQty">
+                      <option value="1" selected>1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="orderCost"
+                      id="orderCost"
+                      size="10"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input type="hidden" id="shippingType" name="shippingType" />
+                    <fieldset>
+                      <legend>Shipping</legend>
+                      <label
+                        ><input
+                          type="radio"
+                          id="overnight"
+                          name="shipping"
+                          value="28.50"
+                          checked
+                        />
+                        Overnight Shipping ($28.50 per)</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          id="day_2"
+                          name="shipping"
+                          value="19.95"
+                        />
+                        2-Day Shipping ($19.95 per)</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          id="dtandard"
+                          name="shipping"
+                          value="0.00"
+                        />
+                        Standard Shipping ($0.00 per)</label
+                      >
+                    </fieldset>
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="shippingCost"
+                      id="shippingCost"
+                      size="10"
+                      readonly
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="rightA">Subtotal</td>
+                  <td class="outcell">
+                    <input
+                      type="text"
+                      name="subTotal"
+                      id="subTotal"
+                      size="10"
+                      readonly
+                    />
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td colspan="2" class="rightA">Tax (5%)</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="salesTax"
+                      id="salesTax"
+                      size="10"
+                      readonly
+                    />
+                  </td>
+                </tr>
+      
+                <tr>
+                  <td colspan="2" class="rightA">TOTAL</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="cartTotal"
+                      id="cartTotal"
+                      size="10"
+                      readonly
+                    />
+                  </td>
+                </tr>
+              </table>
+              <input type="submit" id="buttonAdd" value="Checkout" />
+            </form>
+          </section>
+
+
+
+
+
+
 
 </body>
 </html>
